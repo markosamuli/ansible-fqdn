@@ -12,6 +12,4 @@
 
 - name: restart hostname
   service: name=hostname state=restarted
-  async: 45
-  poll: 0
   when: ansible_distribution not in [ 'RedHat', 'CentOS' ]
